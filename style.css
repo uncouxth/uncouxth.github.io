@@ -1,11 +1,8 @@
-body {
-  height: 100vh;
-  width: 100vh;
-  overflow: hidden;
-}
+html, body { min-height: 100%; }
 
 body div {
-  color: #131314;
+  background: #131314;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
