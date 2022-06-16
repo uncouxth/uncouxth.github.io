@@ -1,3 +1,6 @@
 body {
   color: #131314;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
