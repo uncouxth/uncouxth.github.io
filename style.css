@@ -2,12 +2,6 @@ html {
   background: #131314;
 }
 
-body div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /* https://codepen.io/thetallweeks/pen/yybGra */
 
 .loading {
