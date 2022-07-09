@@ -30,7 +30,7 @@ body::-webkit-scrollbar {
 }
 .sky { 
   grid-area: 1 / 1 / 3 / 4; 
-  /* background: #333336; */
+  padding: 12px;
   border: 1px solid white;
 }
 .door { 
