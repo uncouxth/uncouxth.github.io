@@ -8,22 +8,20 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
   </head>
+
   <body>
-        <div class="parent">
-            <div class="ground"></div>
-            <div class="sky"> 
-               <div class="loading"></div> 
-            </div>
-            <div class="door"></div>
-        </div> 
+      <div class="parent">
+        <div class="ground"></div>
+        <div class="sky"></div>
+        <div class="door"> 
+          <svg width="190" height="250">
+            <rect width="100%" height="100%" class="door2" style="fill:rgb(0,0,0);stroke-width:4;stroke:rgb(255, 255, 255)" />
+            <circle width="200" height="200" class="knob" cx=165 cy=50% r="5" stroke="white" stroke-width="2" />
+          </svg> 
+          </div>
+      </div> 
 
-      <!-- Dependencies: anime.js 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-      <canvas id="canvas" height="700" width="700">
-      </canvas>
-      -->
-    
       <script src="/main.js"></script>
-
     </body>
   </html>
