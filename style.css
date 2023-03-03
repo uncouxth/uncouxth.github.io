@@ -13,7 +13,7 @@ body::-webkit-scrollbar {
 /* Need to figure out better dead space and columns for mobile+desktop */
 .parent {
   display: grid;
-  grid-template-columns: 1fr 210px 1fr;
+  grid-template-columns: 1fr 170px 1fr;
   grid-template-rows: 1fr 260px 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
