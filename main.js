@@ -1,17 +1,72 @@
-anime({
+const drawWaves = () => {
+  anime({
+    targets: '.wave',
+    strokeDashoffset: [anime.setDashoffset, 0],
+    easing: 'cubicBezier(0.00, 0.01, 0.350, 1.020)',
+    duration: eventTimings.wave.duration,
+    delay: eventTimings.wave.delay,
+    loop: false
+  });
+}
+
+const drawDoor = () => {
+  anime({
     targets: '.door2',
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: 'cubicBezier(0.00, 0.01, 0.350, 1.020)',
-    duration: 2150,
-    delay: 400,
+    duration: eventTimings.door.duration,
+    delay: eventTimings.door.delay,
     loop: false
   });
 
-anime({
+  anime({
+    targets: '.knob',
+    opacity: 1,
+    delay: eventTimings.knob.delay,
+    duration: 1,
+    loop: false
+  });
+
+  anime({
     targets: '.knob',
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: 'cubicBezier(0.00, 0.01, 0.350, 1.020)',
-    duration: 500,
-    delay: 2050,
+    duration: eventTimings.knob.duration,
+    delay: eventTimings.knob.delay,
     loop: false
   });
+
+  anime({
+    targets: '.sky',
+    backgroundColor: 'rgb(15 15 15)',
+    delay: 3250,
+    duration: 500,
+  });
+};
+
+const eventTimings  = {
+  sky: {
+    delay: 2300,
+  },
+  wave: {
+    duration: 3000,
+    delay: 500,
+  },
+  door: {
+    duration: 2150,
+    delay: 1350,
+  },
+  knob: {
+    duration: 450,
+    delay: 3050,
+  }
+}
+
+const events = () => {
+  drawWaves();
+  // drawWind();
+  // drawRock();
+  drawDoor();
+}
+
+events();
