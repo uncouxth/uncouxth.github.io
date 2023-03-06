@@ -21,12 +21,85 @@ body::-webkit-scrollbar {
   min-height: 100vh;
   overflow: hidden;
 }
-  
+
+.lines {
+  height: 256px;
+}
+
+.door2 {
+  fill:rgba(0,0,0, 0); 
+  stroke-width: 4; 
+  stroke:rgb(255, 255, 255)
+}
+
+#img-container-ground {
+  pointer-events: none; 
+  position: absolute; 
+  top: calc(((100vh - 260px) / 2) + 260px);
+  height: calc(((100vh - 260px) / 2));
+  overflow: hidden;
+  display: flex;
+  z-index: 7;
+}
+
+#ground-pattern {
+  pointer-events: none; 
+  min-height: 126vh;
+}
+
+#img-container-door {
+  pointer-events: none; 
+  position: absolute; 
+  left: calc(50vw - 83px); 
+  top: calc((100vh - 260px) / 2); 
+  max-width: 166px; 
+  overflow: hidden; 
+  background: black;
+}
+
+#door-pattern {
+  pointer-events: none; 
+  height: 255px;
+}
+
+#img-container-sky {
+  pointer-events: none; 
+  position: absolute; 
+  top: 0;
+  height: calc(((100vh - 260px) / 2) + 260px);
+  overflow: hidden;
+  display: flex;
+}
+
+#sky-pattern {
+  pointer-events: none;
+  min-height: 126vh;
+}
+
+#sky-pattern-for-wide {
+  pointer-events: none;
+  min-height: 126vh;
+  transform: translate(-2px,0) scale(-1,1);
+}
+
 .ground { 
   grid-area: 3 / 1 / 4 / 4; 
   display: flex;
-
+  background: black;
+  transition: box-shadow 2s;
+  z-index: 3;
 }
+
+.ground-line {
+  fill:rgb(0,0,0);
+  stroke-width:4;
+  stroke:rgb(255, 255, 255);
+}
+
+/* .ground:hover {
+  box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+} */
+
 .sky { 
   grid-area: 1 / 1 / 3 / 4; 
   padding: 12px;
@@ -36,32 +109,36 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
   grid-area: 2 / 2 / 3 / 3; 
-  color: white;
+  cursor: pointer;
 }
+
+#door-line {
+  z-index: 2;
+  /* transition: box-shadow 2s; */
+}
+/* 
+#door-line:hover {
+  box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+} */
 
 .knob {
   cursor: pointer;
   opacity: 0;
 }
 
-/* Redefine CSS Grid to keep .door centered */
-@media only screen and (max-width: 708px){
-  .parent {
-    display: grid;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    min-width: auto;
-    overflow: hidden;
-  }
-    
-    .div1 { grid-area: 3 / 1 / 4 / 4; }
-    .div2 { grid-area: 1 / 1 / 3 / 4; }
-    .div3 { grid-area: 2 / 2 / 3 / 3; }
-    
-}
-
 .loading {
   color: #fff;
+}
+
+#bubble {
+  height: 60px;
+  width: 201px;
+  position: absolute;
+  right: calc(50vw - 220px);
+  top: calc(50vh - 60px);
+  opacity: 0;
+  transition: opacity 0.45s;
+  z-index: 4;
 }
 
 .loading:after {

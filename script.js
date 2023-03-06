@@ -1,6 +1,11 @@
+const showBubble = () => {
+  document.getElementById("bubble").style.opacity = 1;
+  setTimeout(() => {document.getElementById("bubble").style.opacity = 0;}, 3000);
+}
+
 const drawWaves = () => {
   anime({
-    targets: '.wave',
+    targets: '.ground-line',
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: 'cubicBezier(0.00, 0.01, 0.350, 1.020)',
     duration: eventTimings.wave.duration,
@@ -36,12 +41,12 @@ const drawDoor = () => {
     loop: false
   });
 
-  anime({
-    targets: '.sky',
-    backgroundColor: 'rgb(15 15 15)',
-    delay: 3250,
-    duration: 500,
-  });
+  // anime({
+  //   targets: '.sky',
+  //   backgroundColor: 'rgb(15 15 15)',
+  //   delay: 3250,
+  //   duration: 500,
+  // });
 };
 
 const eventTimings  = {
@@ -58,7 +63,7 @@ const eventTimings  = {
   },
   knob: {
     duration: 450,
-    delay: 3050,
+    delay: 4550,
   }
 }
 
