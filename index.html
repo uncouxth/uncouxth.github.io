@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Uncouth</title>
+    <meta name="description" content="Helpful software 😊">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Uncouth</title>
     <link rel="stylesheet" href="style_min.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
   </head>
 
   <body>
-    <!-- "textures" that add depth to the surfaces, SVGs with CSS animations -->
     <div id="img-container-sky">
       <img id="sky-pattern" src="assets/svg/sky_pattern_anim.svg"></img>
       <img id="sky-pattern-for-wide" src="assets/svg/sky_pattern_anim.svg"></img>
@@ -20,13 +20,7 @@
       <img id="door-pattern" src="assets/svg/door_pattern_anim.svg"></img>
     </div>
 
-    <!-- lines that define a simple 2d scene with a door -->
     <div class="parent">
-      <div class="ground">
-        <svg width="100%" height="5" style="z-index: 5">
-          <line class="ground-line" x1="0" y1="0" x2="100%" y2="0" />
-        </svg> 
-      </div>
       <div class="sky"></div>
       <div class="door" onClick="showBubble()"> 
         <img id="bubble" src="assets/bubble_wob.png" /> 
@@ -34,11 +28,15 @@
           <rect width="100%" height="100%" class="door2" />
           <circle width="200" height="200" class="knob" cx=150 cy=50% r="5" stroke="white" stroke-width="2" />
         </svg> 
-        </div>
+      </div>
+      <div class="ground">
+        <svg width="100%" height="5" style="z-index: 5">
+          <line class="ground-line" x1="0" y1="0" x2="100%" y2="0" />
+        </svg> 
+      </div>
     </div> 
       
-      <!-- anime.js -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-      <script src="/script_min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/script_min.js"></script>
   </body>
 </html>
